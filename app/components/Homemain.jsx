@@ -19,7 +19,7 @@ export const Homemain = () => {
                              bg-gradient-to-r shadow-lg shadow-purple-500/50 
                              group whitespace-nowrap"
             >
-              LET'S TALK ↗
+              Connect ↗
             </button>
           </Link>
         </nav>
