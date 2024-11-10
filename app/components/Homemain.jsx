@@ -8,7 +8,7 @@ export const Homemain = () => {
         {/* Navigation - Consistent across all breakpoints */}
         <nav className="flex justify-between items-center py-4 sm:py-6 mb-8 sm:mb-12 lg:mb-16">
         <Link href="/" className="text-white italic font-light text-lg sm:text-xl">
-          Faize Muhammed Basheer
+          Faize Muhammed 
         </Link>
 
           <Link href="mailto:faizemuhammedbasheer@gmail.com">
