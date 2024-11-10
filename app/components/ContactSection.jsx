@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const ContactSection = () => {
   return (
-    <div className="min-h-screen max-w-9xl m-2 lg:mx-8 bg-[#1E0044] px-4 sm:px-6 lg:px-8 flex flex-col  sm:m-7 rounded-2xl">
+    <div className="lg:min-h-screen min-h-fit max-w-9xl m-2 lg:mx-8 bg-[#1E0044] px-4 sm:px-6 lg:px-8 flex flex-col  sm:m-7 rounded-2xl">
       {/* Top Navigation */}
       <nav className="max-w-7xl w-full mx-auto pt-4 sm:pt-6 flex flex-col sm:flex-row sm:justify-between items-center gap-4">
         <Link href="/" className="text-white italic font-light text-lg sm:text-xl">

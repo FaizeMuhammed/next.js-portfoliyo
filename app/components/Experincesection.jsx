@@ -51,8 +51,8 @@ const ExperienceSection = () => {
 
   return (
     <div className="min-h-screen  ">
-      <div className="max-w-9xl  m-2 lg:mx-8">
-        <div className="bg-[#1E0044] rounded-3xl p-8 space-y-12 shadow-lg">
+      <div className="max-w-9xl  m-2 lg:m-7  lg:mt-0 ">
+        <div className="bg-[#1E0044] rounded-xl p-8 space-y-10 shadow-lg">
           {/* Experience Section */}
           <div>
             <h2 className="text-white text-2xl sm:text-3xl font-light mb-6">Experience</h2>

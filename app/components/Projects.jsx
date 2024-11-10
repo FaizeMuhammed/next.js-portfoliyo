@@ -56,7 +56,7 @@ const CaseStudyCard = ({ study, isFeatured = false, onClick }) => {
   return (
     <div 
       onClick={onClick}
-      className={`bg-[#d7cdeb] rounded-3xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-[1.02] ${
+      className={`bg-[#d7cdeb] rounded-xl overflow-hidden cursor-pointer transition-transform duration-300  ${
         isFeatured ? 'grid grid-cols-1 lg:grid-cols-2 gap-8 p-8' : 'p-4'
       }`}
     >
@@ -129,8 +129,8 @@ const CaseStudiesSection = () => {
   const visibleStudies = caseStudies.filter(study => study.id !== featuredStudy.id).slice(0, 4);
 
   return (
-    <div className="min-h-fit bg-black py-6 px-0 sm:px-6 lg:px-8 max-w-9xl m-2 lg:m-0">
-      <div className="max-w-9xl mx-auto space-y-8">
+    <div className="min-h-fit bg-black  max-w-9xl lg:m-7  lg:mt-0 lg:mb-2 m-2">
+      <div className="max-w-9xl mx-auto space-y-2">
         <div className="relative">
           <CaseStudyCard study={featuredStudy} isFeatured={true} />
           
@@ -149,7 +149,7 @@ const CaseStudiesSection = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
           {visibleStudies.map((study) => (
             <CaseStudyCard 
               key={study.id}

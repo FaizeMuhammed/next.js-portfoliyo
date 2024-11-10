@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ServiceCard = ({ title, description, tags }) => (
-  <div className="bg-gradient-to-r from-[#8338EC] to-[#9C2EF5] rounded-3xl p-8 flex flex-col h-full w-full">
+  <div className="bg-gradient-to-r from-[#8338EC] to-[#9C2EF5] rounded-xl p-8 flex flex-col h-full w-full">
     <h3 className="text-white text-2xl sm:text-3xl font-light mb-8">{title}</h3>
     <p className="text-gray-200 text-sm sm:text-base mb-8 flex-grow">
       {description}
@@ -34,9 +34,9 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="min-h-fit  bg-black  px-0 sm:px-6 lg:px-8">
-      <div className="max-w-9xl  m-2 lg:m-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="min-h-fit  bg-black lg:mr-7 lg:mb-2 lg:mt-2  lg:ml-7 m-2">
+      <div className="max-w-9xl  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
