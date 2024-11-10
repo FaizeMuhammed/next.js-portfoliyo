@@ -11,7 +11,7 @@ const ContactSection = () => {
         </Link>
         <div className="flex items-center gap-3 sm:gap-4 lg:gap-8">
           <Link 
-            href="www.linkedin.com/in/faize-muhammed-basheer" 
+            href="https://www.linkedin.com/in/faize-muhammed-basheer/" 
             className="text-gray-300 hover:text-white transition text-xs sm:text-sm lg:text-base"
           >
             LINKEDIN ↗
