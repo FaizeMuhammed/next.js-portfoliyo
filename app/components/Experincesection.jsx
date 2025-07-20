@@ -4,15 +4,37 @@ import { ArrowUpRight } from 'lucide-react';
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "MERN STACK DEVELOPER",
+      title: "FULL-STACK DEVELOPER",
+      company: "BancWise Technologies (Fintech)",
+      location: "Thrissur, Kerala",
+      date: "November 2024 – Present",
+      details: [
+        "Independently leading development of fintech web applications using Next.js, Node.js, and Python.",
+        "Designed and deployed FlashFund — a full-scale personal loan platform — from scratch to production, including authentication, financial logic, and UI/UX.",
+        "Currently building a mutual fund platform and other financial tools under the ONDC (Open Network for Digital Commerce) using Beckn Protocol.",
+        "Developed modern UIs with Next.js + ShadCN UI and integrated scalable backend services.",
+        "Deployed secure, production-grade applications with full ownership of infrastructure and releases."
+      ]
+    },
+    {
+      title: "FREELANCE FULL-STACK DEVELOPER",
+      company: "Self-Employed",
+      location: "Thrissur, Kerala / Remote",
+      date: "2023 – Present",
+      details: [
+        "Currently developing a web application for the leading business network Rotary Business Club, Thrissur, featuring business ranking, internal chat, and member engagement — built with Next.js and ShadCN UI; near production phase.",
+        "Completed a fully-featured appointment and clinic management system for Heemas Clinic, Thrissur — including doctor schedules, patient data, billing, and admin dashboards. Built independently and now completed 900+ appointments.",
+        "Handled the full development lifecycle — from client discussions and UI/UX to backend and deployment."
+      ]
+    },
+    {
+      title: "MERN STACK DEVELOPER TRAINEE",
       company: "Stackmod Innovations",
       location: "Thiruvananthapuram, Kerala",
-      date: "April 2024 – Nov 2024",
+      date: "April 2024 – October 2024",
       details: [
-        "Developed and optimized responsive user interfaces using HTML, CSS, JavaScript, and modern frameworks, ensuring cross-browser compatibility and accessibility standards.",
-        "Developed and maintained full-stack web applications using the MERN (MongoDB, Express.js, React.js, Node.js) stack.",
-        "Collaborated with teams on various projects, implementing responsive and dynamic features.",
-        "Gained hands-on experience with RESTful APIs, JWT authentication, and MongoDB database management"
+        "Worked on MERN-based web apps, contributing to UI development, API integration, and performance tuning.",
+        "Participated in version control and agile collaboration workflows."
       ]
     }
   ];

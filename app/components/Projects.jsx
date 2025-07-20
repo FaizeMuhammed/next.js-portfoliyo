@@ -1,52 +1,85 @@
 "use client"
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Building2, Heart, ShoppingCart, TrendingUp, Church, CreditCard, Home, Users, MessageCircle, CheckSquare } from 'lucide-react';
 
 const caseStudies = [
   {
     id: 1,
-    title: "Fullstack Real Estate E-commerce Platform",
-    category: "PROJECTS",
-    tags: ["NEXT.JS","REACT","NODE.JS","MONGODB","AWS S3","SOCKET.IO","RAZORPAY"],
-    description: "Developed a dynamic real estate platform using React, Next.js, Node.js, MongoDB, AWS S3, Razorpay, and Socket.IO, enabling users to browse properties, communicate in real-time, and complete secure transactions with a responsive interface, image storage, premium membership options, and a comprehensive admin dashboard with full CRUD functionality.",
-    image: "/Screenshot 2024-11-07 145229.png"
+    title: "Business Club Web Application – Rotary Club, Thrissur",
+    category: "FREELANCE CLIENT",
+    tags: ["NEXT.JS", "SHADCN UI", "ZUSTAND", "NODE.JS"],
+    description: "Business networking platform with user roles, business ranking, real-time chat, and custom dashboards. Full-stack development handled independently, currently nearing production.",
+    gradient: "bg-gradient-to-br from-blue-500 via-purple-600 to-blue-700",
+    icon: Building2
   },
   {
     id: 2,
-    title: "Full-stack Social Media News Platform",
-    category: "",
-    tags: ["NEXT.JS","NODE.JS","MONGODB","EXPRESS.JS","SHADCN UI","JWT", "FIGMA"],
-    description: "Developed a Social Media News Platform with a Next.js frontend and Node.js backend, leveraging Zustand for state management, Shadcn UI components, and JWT authentication. Built an admin dashboard for managing users, posts, likes, comments, and news additions, using MongoDB for data storage and deploying on Vercel (frontend) and Render (backend) to ensure secure, role-based access and a smooth user experience",
-    image: "/Screenshot 2024-10-22 143110.png"
+    title: "Clinic Appointment System – Heemas Clinic, Thrissur",
+    category: "FREELANCE CLIENT",
+    tags: ["MONGODB", "EXPRESS.JS", "REACT", "NODE.JS"],
+    description: "Developed a clinic management app with modules for doctors, appointments, billing, and patient tracking. Single-handedly built from scratch; now live with 700+ active users.",
+    gradient: "bg-gradient-to-br from-green-500 via-teal-600 to-green-700",
+    icon: Heart
   },
   {
     id: 3,
-    title: "Full-stack social media/Chat platform",
-    category: "CASE STUDY",
-    tags: ["EJS","NODE.JS","MONGODB","EXPRESS.JS","JWT", "FIGMA"],
-    description: "Developed a full-stack social media platform using Node.js, Express, MongoDB, EJS, and Socket.IO, featuring user authentication, personal chat functionality, and real-time private messaging. Built a secure CRUD system for user-generated posts with JWT-based authentication, enabling users to create, edit, and delete posts while storing chat histories in MongoDB",
-    image: "/Screenshot 2024-09-28 130936.png"
+    title: "Full-Stack Real Estate E-commerce Platform",
+    category: "PORTFOLIO PROJECT",
+    tags: ["REACT", "NEXT.JS", "NODE.JS", "MONGODB", "AWS S3", "RAZORPAY", "SOCKET.IO"],
+    description: "Real estate app with property listings, chat, payment integration, and an admin dashboard. Features dynamic property browsing, real-time communication, and secure transactions.",
+    gradient: "bg-gradient-to-br from-orange-500 via-red-600 to-pink-700",
+    icon: Home
   },
   {
     id: 4,
-    title: "Employee-Managment",
-    category: "CASE STUDY",
-    tags: ["JS","NODE.JS","MONGODB","EXPRESS.JS","JWT", "FIGMA"],
-    description: "Developed an employee management system using Node.js, Express, and Redux, supporting efficient CRUD operations and real-time data management. Designed a responsive front end with HTML, CSS, Bootstrap, and JavaScript to provide a seamless user experience for managing employee records.",
-    image: "/employee-management.png"
+    title: "Full-Stack Social Media News Platform",
+    category: "PORTFOLIO PROJECT",
+    tags: ["NEXT.JS", "NODE.JS", "MONGODB", "ZUSTAND", "SHADCN UI", "JWT"],
+    description: "Blog-style platform with user roles, authentication, moderation, and content management dashboard. Built with modern state management and UI components.",
+    gradient: "bg-gradient-to-br from-purple-500 via-indigo-600 to-purple-700",
+    icon: Users
   },
   {
     id: 5,
-    title: "Static Responsive Webpage and Bootstrap Form",
-    category: "CASE STUDY",
-    tags: ["HTML", "CSS","JAVASCRIPT","BOOTSTRAP"],
-    description: "Developed a static, responsive website using HTML, CSS, and Bootstrap, delivering cross-device compatibility and a modern user interface.",
-    image: "/Screenshot 2024-09-21 172607.png"
+    title: "Ecopeedika Grocery Web App – Frontend",
+    category: "FREELANCE CLIENT",
+    tags: ["NEXT.JS", "TAILWIND CSS"],
+    description: "Created a responsive and clean shopping UI for a local grocery brand with category-based navigation and mobile-first design approach.",
+    gradient: "bg-gradient-to-br from-emerald-500 via-green-600 to-teal-700",
+    icon: ShoppingCart
+  },
+  {
+    id: 6,
+    title: "WEALTH Web Application – Frontend",
+    category: "FREELANCE CLIENT",
+    tags: ["NEXT.JS", "CSS MODULES"],
+    description: "Built responsive landing and dashboard pages for a startup with performance-focused rendering and modern UI design.",
+    gradient: "bg-gradient-to-br from-yellow-500 via-orange-600 to-red-700",
+    icon: TrendingUp
+  },
+  {
+    id: 7,
+    title: "Social Media Platform with Real-Time Chat",
+    category: "PORTFOLIO PROJECT",
+    tags: ["NODE.JS", "EXPRESS.JS", "MONGODB", "EJS", "SOCKET.IO"],
+    description: "Chat app with real-time private messaging, user auth, and profile features. Built with Socket.IO for seamless real-time communication.",
+    gradient: "bg-gradient-to-br from-cyan-500 via-blue-600 to-indigo-700",
+    icon: MessageCircle
+  },
+  {
+    id: 8,
+    title: "Cloud-Based Task Management System",
+    category: "PORTFOLIO PROJECT",
+    tags: ["REACT", "NODE.JS", "MONGODB", "JWT"],
+    description: "Built a scalable task manager with admin and user panels, hosted on cloud infrastructure with robust authentication and role management.",
+    gradient: "bg-gradient-to-br from-violet-500 via-purple-600 to-pink-700",
+    icon: CheckSquare
   }
 ];
 
 const CaseStudyCard = ({ study, isFeatured = false, onClick }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const IconComponent = study.icon;
   
   const toggleReadMore = (e) => {
     e.stopPropagation();
@@ -61,15 +94,78 @@ const CaseStudyCard = ({ study, isFeatured = false, onClick }) => {
       }`}
     >
       <div className={`${isFeatured ? 'order-2' : ''}`}>
-        <img 
-          src={study.image} 
-          alt={study.title}
-          className="rounded-2xl w-full h-full object-cover transition hover:scale-105 shadow-lg shadow-purple-500/50"
-        />
+        <div className={`relative rounded-2xl w-full h-full overflow-hidden transition hover:scale-105 shadow-lg shadow-purple-500/50 ${isFeatured ? 'min-h-[300px]' : 'h-48'} bg-gradient-to-br from-slate-50 to-gray-100`}>
+          {/* Abstract Data Visualization Style */}
+          <div className="absolute inset-0">
+            {/* Circular Progress Rings */}
+            <div className="absolute top-6 left-6">
+              <div className="relative w-16 h-16">
+                <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                  <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
+                        fill="none" stroke="#e5e7eb" strokeWidth="2"/>
+                  <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" 
+                        fill="none" stroke="#8b5cf6" strokeWidth="2" strokeDasharray="75, 100" 
+                        className="animate-pulse"/>
+                </svg>
+              </div>
+            </div>
+            
+            {/* Bar Chart Elements */}
+            <div className="absolute bottom-6 left-6 flex items-end gap-1">
+              <div className="w-2 bg-violet-400 rounded-t animate-pulse" style={{ height: '20px', animationDelay: '0s' }}></div>
+              <div className="w-2 bg-violet-500 rounded-t animate-pulse" style={{ height: '35px', animationDelay: '0.2s' }}></div>
+              <div className="w-2 bg-violet-300 rounded-t animate-pulse" style={{ height: '28px', animationDelay: '0.4s' }}></div>
+              <div className="w-2 bg-violet-600 rounded-t animate-pulse" style={{ height: '42px', animationDelay: '0.6s' }}></div>
+              <div className="w-2 bg-violet-400 rounded-t animate-pulse" style={{ height: '15px', animationDelay: '0.8s' }}></div>
+            </div>
+            
+            {/* Connecting Lines/Network */}
+            <div className="absolute inset-0 pointer-events-none">
+              <svg className="w-full h-full opacity-30">
+                <defs>
+                  <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#8b5cf6" />
+                    <stop offset="100%" stopColor="#a855f7" />
+                  </linearGradient>
+                </defs>
+                <path d="M20,20 Q80,40 150,30 T250,80" stroke="url(#lineGradient)" strokeWidth="2" fill="none" className="animate-pulse"/>
+                <path d="M50,80 Q120,60 180,90 T280,50" stroke="url(#lineGradient)" strokeWidth="1.5" fill="none" className="animate-pulse" style={{ animationDelay: '1s' }}/>
+                <circle cx="20" cy="20" r="3" fill="#8b5cf6" className="animate-ping" style={{ animationDelay: '0.5s' }}/>
+                <circle cx="150" cy="30" r="2" fill="#a855f7" className="animate-ping" style={{ animationDelay: '1.5s' }}/>
+                <circle cx="180" cy="90" r="2.5" fill="#8b5cf6" className="animate-ping" style={{ animationDelay: '2s' }}/>
+              </svg>
+            </div>
+            
+            {/* Tech Stack as Data Points */}
+            <div className="absolute top-6 right-6 space-y-2">
+              {study.tags.slice(0, 4).map((tag, idx) => (
+                <div key={idx} className="flex items-center gap-2 animate-pulse" style={{ animationDelay: `${idx * 0.3}s` }}>
+                  <div className="w-2 h-2 bg-violet-500 rounded-full"></div>
+                  <span className="text-xs font-mono text-gray-600">{tag}</span>
+                </div>
+              ))}
+            </div>
+            
+            {/* Central Icon with Pulse Effect */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-violet-400 rounded-full animate-ping opacity-75"></div>
+                <div className="relative bg-white rounded-full p-4 shadow-lg">
+                  <IconComponent className={`text-violet-600 ${isFeatured ? 'w-12 h-12' : 'w-8 h-8'}`} />
+                </div>
+              </div>
+            </div>
+            
+            {/* Project Number as Watermark */}
+            <div className="absolute bottom-4 right-4 text-6xl font-bold text-violet-100 select-none">
+              {String(study.id).padStart(2, '0')}
+            </div>
+          </div>
+        </div>
       </div>
       
       <div className={`flex flex-col ${isFeatured ? 'justify-center space-y-6' : 'mt-4 space-y-2'}`}>
-        <span className="text-[#0B001A] text-sm">PROJECTS</span>
+        <span className="text-[#0B001A] text-sm">{study.category}</span>
         <h3 className={`text-[#0B001A] ${isFeatured ? 'text-4xl' : 'text-xl'} font-light`}>
           {study.title}
         </h3>
@@ -101,7 +197,7 @@ const CaseStudyCard = ({ study, isFeatured = false, onClick }) => {
               )}
             </div>
             <button className="w-fit relative flex items-center px-6 py-3 text-[#0B001A] text-sm bg-transparent rounded-full border border-purple-500 transition hover:scale-105 shadow-lg shadow-purple-500/50">
-              <a href="https://github.com/FaizeMuhammed"> GIT-REPO ↗</a>
+              <a href="https://github.com/FaizeMuhammed"> VIEW PROJECT ↗</a>
             </button>
           </>
         )}
