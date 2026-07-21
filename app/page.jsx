@@ -113,7 +113,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* TECH STACK & PROTOCOLS SECTION (Moved down near the bottom for clean flow) */}
+      {/* TECH STACK & PROTOCOLS SECTION */}
       <section id="stack" className="px-4 md:px-8 py-16 border-t border-black bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest mb-8">
@@ -178,7 +178,7 @@ export default function Portfolio() {
               Get In Touch
             </div>
             <h3 className="text-2xl md:text-3xl font-bold tracking-tighter max-w-sm">
-              Let's build scalable infrastructure together.
+              Let&apos;s build scalable infrastructure together.
             </h3>
           </div>
           <div className="flex flex-col justify-center">
