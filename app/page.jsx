@@ -6,13 +6,13 @@ export default function Portfolio() {
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
       
       {/* NAVBAR */}
-      <nav className="flex justify-between items-center px-4 md:px-8 py-6 border-b border-gray-300">
+      <nav className="flex justify-between items-center px-4 md:px-8 py-6">
         <div className="text-xl md:text-2xl font-black tracking-tighter">●</div>
         <div className="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
           <a href="#architecture" className="hover:underline">#Architecture</a>
-          <a href="#design" className="hover:underline">#Design</a>
+          <a href="#experience" className="hover:underline">#Experience</a>
+          <a href="#skills" className="hover:underline">#Skills</a>
           <a href="/blogs" className="hover:underline">#Blogs</a>
-          <a href="#stack" className="hover:underline">#Tech Stack</a>
           <a href="#contact" className="hover:underline">#Contact</a>
         </div>
         <a 
@@ -58,12 +58,12 @@ export default function Portfolio() {
       </header>
 
       {/* BACKEND ARCHITECTURE SECTION */}
-      <section id="architecture" className="px-4 md:px-8 pb-16 pt-8">
+      <section id="architecture" className="px-4 md:px-8 pb-16 pt-16">
         <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest mb-8">
           Backend Architecture
         </div>
         
-        <Link href="/ondc" className="group border-t border-b border-black py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-baseline hover:bg-gray-50 transition-colors block cursor-pointer">
+        <Link href="/ondc" className="group border-t border-b border-gray-300 py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-baseline hover:bg-gray-50 transition-colors block cursor-pointer">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter group-hover:pl-0 md:group-hover:pl-4 transition-all">ONDC FINANCIAL CONNECTOR</h2>
           <div className="text-left md:text-right mt-2 md:mt-0">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500">Node.js / PostgreSQL</p>
@@ -71,7 +71,7 @@ export default function Portfolio() {
           </div>
         </Link>
 
-        <Link href="/faigen" className="group border-b border-black py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-baseline hover:bg-gray-50 transition-colors block cursor-pointer">
+        <Link href="/faigen" className="group border-b border-gray-300 py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-baseline hover:bg-gray-50 transition-colors block cursor-pointer">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter group-hover:pl-0 md:group-hover:pl-4 transition-all">FAIGEN AI (META TECH)</h2>
           <div className="text-left md:text-right mt-2 md:mt-0">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500">Next.js / MongoDB</p>
@@ -79,7 +79,7 @@ export default function Portfolio() {
           </div>
         </Link>
 
-        <Link href="/rta-pipeline" className="group border-b border-black py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-baseline hover:bg-gray-50 transition-colors block cursor-pointer">
+        <Link href="/rta-pipeline" className="group border-b border-gray-300 py-6 md:py-8 flex flex-col md:flex-row justify-between items-start md:items-baseline hover:bg-gray-50 transition-colors block cursor-pointer">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter group-hover:pl-0 md:group-hover:pl-4 transition-all">RTA MAILBACK PIPELINE</h2>
           <div className="text-left md:text-right mt-2 md:mt-0">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500">FastAPI / Python</p>
@@ -88,15 +88,127 @@ export default function Portfolio() {
         </Link>
       </section>
 
+      {/* WORK EXPERIENCE SECTION */}
+      <section id="experience" className="px-4 md:px-8 py-16">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
+          <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest">
+            Work Experience
+          </div>
+          <a href="/faize-resume.pdf" target="_blank" className="text-sm font-bold uppercase tracking-widest hover:underline text-gray-500">Download Full Resume →</a>
+        </div>
+
+        <div className="space-y-0">
+          <div className="group border-t border-gray-300 py-8 md:py-12 flex flex-col md:flex-row gap-4 md:gap-12 hover:bg-gray-50 transition-colors cursor-default">
+            <div className="md:w-1/4 flex flex-col justify-start">
+              <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Nov 2024 — Present</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mt-1">Software Engineer</p>
+            </div>
+            <div className="md:w-3/4">
+              <h3 className="text-2xl md:text-4xl font-bold tracking-tighter">Bancwise Technologies</h3>
+              <p className="mt-4 text-base md:text-lg text-gray-700 max-w-3xl leading-relaxed">
+                Architecting multi-tenant mutual fund platforms and leading the backend development of live ONDC financial connectors. Engineered highly concurrent RTA mailback parsing pipelines to automate systematic investment plan (SIP) data ingestion.
+              </p>
+            </div>
+          </div>
+
+          <div className="group border-t border-gray-300 py-8 md:py-12 flex flex-col md:flex-row gap-4 md:gap-12 hover:bg-gray-50 transition-colors cursor-default">
+            <div className="md:w-1/4 flex flex-col justify-start">
+              <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Founder</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mt-1">Product Engineer</p>
+            </div>
+            <div className="md:w-3/4">
+              <h3 className="text-2xl md:text-4xl font-bold tracking-tighter">Faigen AI (Meta Tech Provider)</h3>
+              <p className="mt-4 text-base md:text-lg text-gray-700 max-w-3xl leading-relaxed">
+                Built and scaled a multi-tenant AI automation SaaS recognized as an official Meta Tech Provider. Designed the complete architecture using Next.js, Node.js, and MongoDB to serve automated B2B conversational flows with 99.9% uptime.
+              </p>
+            </div>
+          </div>
+
+          <div className="group border-t border-b border-gray-300 py-8 md:py-12 flex flex-col md:flex-row gap-4 md:gap-12 hover:bg-gray-50 transition-colors cursor-default">
+            <div className="md:w-1/4 flex flex-col justify-start">
+              <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Prior Experience</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mt-1">Junior Software Eng.</p>
+            </div>
+            <div className="md:w-3/4">
+              <h3 className="text-2xl md:text-4xl font-bold tracking-tighter">Stackmod Innovations</h3>
+              <p className="mt-4 text-base md:text-lg text-gray-700 max-w-3xl leading-relaxed">
+                Developed and deployed a scalable hospital appointment booking platform utilizing the MERN stack (MongoDB, Express.js, React, Node.js), focusing on robust API routing and system performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPREHENSIVE SKILLS SECTION */}
+      <section id="skills" className="px-4 md:px-8 py-20 bg-gray-50">
+        <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest mb-12">
+          Engineering Arsenal
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Frontend */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 border-b border-gray-300 pb-2">Frontend & Interface</h3>
+            <ul className="space-y-3 font-bold tracking-tight text-lg">
+              <li>Next.js / React</li>
+              <li>React Native</li>
+              <li>Tailwind CSS</li>
+              <li>Shadcn UI</li>
+              <li>Framer Motion</li>
+              <li>Glassmorphism UI</li>
+            </ul>
+          </div>
+          
+          {/* Backend */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 border-b border-gray-300 pb-2">Backend & Databases</h3>
+            <ul className="space-y-3 font-bold tracking-tight text-lg">
+              <li>Node.js / Express.js</li>
+              <li>FastAPI / Python</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>Redis Caching</li>
+              <li>RESTful API Architecture</li>
+            </ul>
+          </div>
+
+          {/* Infrastructure */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 border-b border-gray-300 pb-2">Cloud & DevOps</h3>
+            <ul className="space-y-3 font-bold tracking-tight text-lg">
+              <li>AWS EC2 / S3</li>
+              <li>DigitalOcean</li>
+              <li>Linux / Bash Scripting</li>
+              <li>Vercel Deployment</li>
+              <li>Systemd Services</li>
+              <li>Git / CI-CD</li>
+            </ul>
+          </div>
+
+          {/* Protocols */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 border-b border-gray-300 pb-2">AI, APIs & Networks</h3>
+            <ul className="space-y-3 font-bold tracking-tight text-lg">
+              <li>ONDC Beckn Protocol</li>
+              <li>Meta WhatsApp Cloud API</li>
+              <li>BSE Star MF / CAMS RTA</li>
+              <li>UIDAI e-KYC Integrations</li>
+              <li>Gemini AI / OpenAI APIs</li>
+              <li>LLM Conversational Flows</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCT DESIGN / UI SECTION */}
-      <section id="design" className="px-4 md:px-8 pb-20 pt-8">
+      <section id="design" className="px-4 md:px-8 pb-20 pt-16">
         <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest mb-8">
           Product Design & UI
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-black pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
           <div className="group cursor-pointer">
-            <div className="w-full h-48 md:h-64 bg-[#0a0a0a] border border-gray-300 flex items-center justify-center mb-4 transition-all group-hover:border-black p-4 text-center">
+            <div className="w-full h-48 md:h-64 bg-[#0a0a0a] border border-gray-200 flex items-center justify-center mb-4 transition-all group-hover:border-black p-4 text-center">
                <span className="text-white text-xs font-bold uppercase tracking-widest">[ Caply Pure White Logo / Dark Mode UI ]</span>
             </div>
             <h3 className="text-xl md:text-2xl font-bold tracking-tighter">Caply Mutual Fund Dashboard</h3>
@@ -104,7 +216,7 @@ export default function Portfolio() {
           </div>
           
           <div className="group cursor-pointer">
-            <div className="w-full h-48 md:h-64 bg-gray-100 border border-gray-300 flex items-center justify-center mb-4 transition-all group-hover:border-black p-4 text-center">
+            <div className="w-full h-48 md:h-64 bg-gray-100 border border-gray-200 flex items-center justify-center mb-4 transition-all group-hover:border-black p-4 text-center">
                <span className="text-gray-500 text-xs font-bold uppercase tracking-widest">[ Flash-Verify Identity UI ]</span>
             </div>
             <h3 className="text-xl md:text-2xl font-bold tracking-tighter">Flash-Verify App Branding</h3>
@@ -113,56 +225,29 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* TECH STACK & PROTOCOLS SECTION */}
-      <section id="stack" className="px-4 md:px-8 py-16 border-t border-black bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest mb-8">
-            Core Ecosystems & Engineering Stack
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Fintech Protocols & Networks</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">ONDC Beckn</span>
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">BSE Star MF</span>
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">CAMS/Karvy RTA</span>
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">UIDAI e-KYC</span>
-              </div>
-            </div>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Core Frameworks & APIs</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">Next.js</span>
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">FastAPI</span>
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">Meta WhatsApp API</span>
-                <span className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider">PostgreSQL / Redis</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* LATEST WRITING / BLOGS PREVIEW */}
-      <section className="px-4 md:px-8 py-20 border-t border-black">
+      <section className="px-4 md:px-8 py-20">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tighter">/ Latest Writing</h2>
-          <Link href="/blogs" className="text-sm font-bold uppercase tracking-widest hover:underline">View All Articles →</Link>
+          <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest">
+            Latest Writing
+          </div>
+          <Link href="/blogs" className="text-sm font-bold uppercase tracking-widest hover:underline text-gray-500">View All Articles →</Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Link href="/blogs/ondc-race-conditions" className="block border border-gray-300 p-6 hover:border-black transition-colors">
+          <Link href="/blogs/ondc-race-conditions" className="block border border-gray-200 p-6 hover:border-black transition-colors">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Fintech Architecture</p>
             <h3 className="text-lg md:text-xl font-bold tracking-tighter leading-tight mb-4">Handling complex race conditions in ONDC personal loan provisioning.</h3>
             <p className="text-sm text-gray-600 font-medium">Read Article →</p>
           </Link>
           
-          <Link href="/blogs/rta-fastapi-pipelines" className="block border border-gray-300 p-6 hover:border-black transition-colors">
+          <Link href="/blogs/rta-fastapi-pipelines" className="block border border-gray-200 p-6 hover:border-black transition-colors">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Data Engineering</p>
             <h3 className="text-lg md:text-xl font-bold tracking-tighter leading-tight mb-4">Building highly concurrent mailback parsing pipelines with FastAPI.</h3>
             <p className="text-sm text-gray-600 font-medium">Read Article →</p>
           </Link>
 
-          <Link href="/blogs/meta-tech-provider" className="block border border-gray-300 p-6 hover:border-black transition-colors">
+          <Link href="/blogs/meta-tech-provider" className="block border border-gray-200 p-6 hover:border-black transition-colors">
             <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">SaaS Scaling</p>
             <h3 className="text-lg md:text-xl font-bold tracking-tighter leading-tight mb-4">Lessons learned scaling a multi-tenant AI product as a Meta Tech Provider.</h3>
             <p className="text-sm text-gray-600 font-medium">Read Article →</p>
@@ -171,7 +256,7 @@ export default function Portfolio() {
       </section>
 
       {/* BIG CONTACT SECTION */}
-      <section id="contact" className="px-4 md:px-8 py-20 border-t border-black bg-gray-50">
+      <section id="contact" className="px-4 md:px-8 py-20 bg-gray-50">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16">
           <div>
             <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest mb-4">
