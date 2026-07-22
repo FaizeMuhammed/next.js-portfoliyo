@@ -200,30 +200,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* PRODUCT DESIGN / UI SECTION */}
-      <section id="design" className="px-4 md:px-8 pb-20 pt-16">
-        <div className="bg-black text-white inline-block px-2 py-1 text-xs font-bold uppercase tracking-widest mb-8">
-          Product Design & UI
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-          <div className="group cursor-pointer">
-            <div className="w-full h-48 md:h-64 bg-[#0a0a0a] border border-gray-200 flex items-center justify-center mb-4 transition-all group-hover:border-black p-4 text-center">
-               <span className="text-white text-xs font-bold uppercase tracking-widest">[ Caply Pure White Logo / Dark Mode UI ]</span>
-            </div>
-            <h3 className="text-xl md:text-2xl font-bold tracking-tighter">Caply Mutual Fund Dashboard</h3>
-            <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mt-2">Fintech SaaS Interface</p>
-          </div>
-          
-          <div className="group cursor-pointer">
-            <div className="w-full h-48 md:h-64 bg-gray-100 border border-gray-200 flex items-center justify-center mb-4 transition-all group-hover:border-black p-4 text-center">
-               <span className="text-gray-500 text-xs font-bold uppercase tracking-widest">[ Flash-Verify Identity UI ]</span>
-            </div>
-            <h3 className="text-xl md:text-2xl font-bold tracking-tighter">Flash-Verify App Branding</h3>
-            <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mt-2">Digital Identity Verification</p>
-          </div>
-        </div>
-      </section>
 
       {/* LATEST WRITING / BLOGS PREVIEW */}
       <section className="px-4 md:px-8 py-20">
